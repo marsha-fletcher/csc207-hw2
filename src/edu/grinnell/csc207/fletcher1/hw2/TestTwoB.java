@@ -17,6 +17,8 @@ public class TestTwoB {
 		assertEquals("average rounds to zero, right negative", 0, TwoB.average(-4, 5));
 		assertEquals("average is 0", 0, TwoB.average(-4, 4));
 		assertEquals("Everything is 0", 0, TwoB.average(0, 0));
+		assertEquals("Everything is MAX_VALUE", -1, TwoB.average(Integer.MAX_VALUE, Integer.MAX_VALUE));
+		assertEquals("left+right > MAX_VALUE", -1, TwoB.average(2147483647, 5));
 	}
 
 }
